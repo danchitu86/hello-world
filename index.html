@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
-
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-
-</body>
+    <script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "http://localhost:3000/api/item", true);
+        xhttp.send();
+    }
+    </script>
+    <h1>Welocme to Apa Nova Curs</h1>
+    <img src="apanova-logo-simplu.jpg">
+    <hr />
+    <div id="demo">
+        <h2>Let AJAX change this text</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
 </html>
